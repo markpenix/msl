@@ -37,7 +37,7 @@ $ rails generate controller pages home about
 
 #updated routes.rb for root page and added about path
 root "pages#home"  
-get "about" => "pages#about 
+get "about" => "pages#about"
 
 #created and added partial _header.html.erb in layouts
 <%= link_to "Home", root_path %>     
