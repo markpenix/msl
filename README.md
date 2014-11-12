@@ -36,6 +36,18 @@ Please feel free to use a different markup language if you do not plan to run
 $ rails generate controller pages home about
 ```
 
+*created in views/layouts/_header.html.erb and added:*
+```ruby
+<%= link_to "Home", root_path %>
+<%= link_to "About", about_path %>
+```
+
+*then in home and about pages, added:*
+```ruby
+<%= render 'layouts/header' %>
+````
+
+
 *updated routes.rb for root page*
 ```ruby
 root "pages#home"
