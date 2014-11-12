@@ -14,4 +14,5 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+gem 'bootstrap-sass'
 #gem 'devise'

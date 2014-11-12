@@ -30,28 +30,29 @@ Please feel free to use a different markup language if you do not plan to run
 
 ## Order of creation
 
-*generated home and about page controllers*
 
 ```ruby
+#generated home and about page controllers
 $ rails generate controller pages home about
-```
 
-*created in views/layouts/_header.html.erb and added:*
-```ruby
-<%= link_to "Home", root_path %>
-<%= link_to "About", about_path %>
-```
+#updated routes.rb for root page and added about path
+root "pages#home"  
+get "about" => "pages#about 
 
-*then in home and about pages, added:*
-```ruby
+#created and added partial _header.html.erb in layouts
+<%= link_to "Home", root_path %>     
+<%= link_to "About", about_path %>   
+
+#added to partial render to home and about pages
 <%= render 'layouts/header' %>
-````
 
+#added bootstrap to gemfile
+gem 'bootstrap-sass'
 
-*updated routes.rb for root page*
-```ruby
-root "pages#home"
+#created bootstrap_and_customization.css.scss to /app/assets/stylesheets
+@import 'bootstrap';
 ```
+
 
 
 ### Devise Configuration
